@@ -10,12 +10,15 @@ steps:
 
   ## Function helloGet
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: gcloud
   args: ['functions', 'deploy', 'helloGet', '--runtime', 'nodejs12', '--trigger-http',  '--allow-unauthenticated']
 
   ## Function helloEnv
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: gcloud
   args: ['functions', 'deploy', 'helloEnv', '--runtime', 'nodejs12', '--trigger-http',  '--allow-unauthenticated']
 
   ## Function helloContent
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: gcloud
   args: ['functions', 'deploy', 'helloContent', '--runtime', 'nodejs12', '--trigger-http',  '--allow-unauthenticated']
