@@ -86,5 +86,5 @@ exports.helloContent = (req, res) => {
  *                     More info: https://expressjs.com/en/api.html#res
  */
 exports.helloGet = (req, res) => {
-    result.status(200).send('Hello GET World!');
+    res.status(200).send('Hello GET World!');
   };
