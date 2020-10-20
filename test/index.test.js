@@ -73,7 +73,7 @@ describe('functions_http_method', () => {
     assert.strictEqual(mocks.res.status.calledOnce, true);
     assert.strictEqual(mocks.res.status.firstCall.args[0], 200);
     assert.strictEqual(mocks.res.send.calledOnce, true);
-    assert.strictEqual(mocks.res.send.firstCall.args[0], 'Hello World!');
+    assert.strictEqual(mocks.res.send.firstCall.args[0], 'Hello Http World!');
   });
 
   it('http:helloHttp: should handle PUT', () => {
