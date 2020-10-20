@@ -10,7 +10,7 @@ const escapeHtml = require('escape-html');
  * @param {Object} res Cloud Function response context.
  *                     More info: https://expressjs.com/en/api.html#res
  */
-exports.helloHttpSimple = (req, res) => {
+exports.helloEnv = (req, res) => {
     res.send(
         `<h3>Hello ${escapeHtml(req.query.name || req.body.name || 'World')}!<h3>`
         + `<h1>Env Variable: ${escapeHtml(process.env.ENV_KEY)}</h1>`
@@ -29,7 +29,7 @@ exports.helloHttpSimple = (req, res) => {
 exports.helloHttp = (req, res) => {
     switch (req.method) {
       case 'GET':
-        res.status(200).send('Hello World!');
+        res.status(200).send('Hello Http World!');
         break;
       case 'PUT':
         res.status(403).send('Forbidden!');
@@ -86,5 +86,5 @@ exports.helloContent = (req, res) => {
  *                     More info: https://expressjs.com/en/api.html#res
  */
 exports.helloGet = (req, res) => {
-    res.status(200).send('Hello GET World!');
+    result.status(200).send('Hello GET World!');
   };

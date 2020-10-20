@@ -1,3 +1,5 @@
+#https://cloud.google.com/functions/docs/testing/test-cicd#functions-prepare-environment-nodejs
+
 steps:
 - name: 'gcr.io/cloud-builders/npm'
   args: ['install']
@@ -5,5 +7,15 @@ steps:
 - name: 'gcr.io/cloud-builders/npm'
   args: ['test']
   dir: './'
+
+  ## Function helloGet
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['functions', 'deploy', 'helloGet', '--trigger-http', '--runtime', 'nodejs12', '--allow-unauthenticated']
+
+  ## Function helloEnv
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['functions', 'deploy', 'helloEnv', '--trigger-http', '--runtime', 'nodejs12', '--allow-unauthenticated']
+
+  ## Function helloContent
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['functions', 'deploy', 'helloContent', '--trigger-http', '--runtime', 'nodejs12', '--allow-unauthenticated']
