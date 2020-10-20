@@ -9,13 +9,13 @@ steps:
   dir: './'
 
   ## Function helloGet
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['functions', 'deploy', 'helloGet', '--trigger-http', '--runtime', 'nodejs12', '--allow-unauthenticated']
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  args: ['functions', 'deploy', 'helloGet', '--runtime', 'nodejs12', '--trigger-http',  '--allow-unauthenticated']
 
   ## Function helloEnv
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['functions', 'deploy', 'helloEnv', '--trigger-http', '--runtime', 'nodejs12', '--allow-unauthenticated']
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  args: ['functions', 'deploy', 'helloEnv', '--runtime', 'nodejs12', '--trigger-http',  '--allow-unauthenticated']
 
   ## Function helloContent
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['functions', 'deploy', 'helloContent', '--trigger-http', '--runtime', 'nodejs12', '--allow-unauthenticated']
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  args: ['functions', 'deploy', 'helloContent', '--runtime', 'nodejs12', '--trigger-http',  '--allow-unauthenticated']
