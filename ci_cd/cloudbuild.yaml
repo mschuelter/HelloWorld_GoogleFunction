@@ -1,8 +1,9 @@
 steps:
 - name: 'gcr.io/cloud-builders/npm'
   args: ['install']
+  dir: './'
 - name: 'gcr.io/cloud-builders/npm'
   args: ['test']
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['functions', 'deploy', 'helloGet', '--trigger-http', '--runtime', 'nodejs12']
   dir: './'
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['functions', 'deploy', 'helloGet', '--trigger-http', '--runtime', 'nodejs12', '--allow-unauthenticated']
